@@ -23,7 +23,7 @@
     border-radius: 8px;
     padding: 12px;
     width: 310px;
-    box-shadow: 0px 10px 20px rgba(0, 255, 0, 0.5);
+    box-shadow: 0px 6px 10px rgba(0, 255, 0, 0.5);
 }
 
 .avatar {
@@ -63,8 +63,9 @@
     justify-content: flex-end;
 }
 .footer-btn{
-    background: #00ff009c;
+    background: #21db219c;
     padding: 10px 15px ;
     border-radius: 20px;
-    color: black;
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0, 255, 0, 0.5);
 }

@@ -52,8 +52,8 @@ function NotFound() {
     }, []);
 
     return (
-        <div style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
-            <canvas
+        <div style={{ position: "relative",  boxShadow: "inset 0 10px 80px rgba(0, 255, 0, 0.5)", height: "100vh", overflow: "hidden"   }}>
+            <canvas 
                 ref={canvasRef}
                 style={{
                     position: "absolute",

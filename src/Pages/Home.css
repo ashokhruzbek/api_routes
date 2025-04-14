@@ -1,0 +1,33 @@
+.home-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f9b0f, #0b9c58, #0ec755);
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+  }
+  
+  /* Gradient harakatlanishi */
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .home-title {
+    font-size: 80px;
+    font-weight: 900;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 
+      0 0 10px #00ffb3,
+      0 0 20px #00ffb3,
+      0 0 40px #00ffb3,
+      0 0 60px #00ffb3,
+      0 0 80px #00ffb3;
+    letter-spacing: 6px;
+    transform-origin: center;
+    text-align: center;
+  }
+  

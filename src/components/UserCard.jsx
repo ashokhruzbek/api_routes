@@ -15,7 +15,7 @@ function UserCard({ism, mail, city,}) {
         </div>
       </div>
         <div className="footer">
-          <Link className='footer-btn'>More</Link>
+          <Link to='/todos' className='footer-btn'>More</Link>
         </div>
     </div>
   )

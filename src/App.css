@@ -17,7 +17,7 @@
   gap: 1rem;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   position: fixed;
-  box-shadow: 0px 10px 100px rgba(0, 255, 0, 0.5);
+  /* box-shadow: 0px 10px 100px rgba(0, 255, 0, 0.5); */
 
 }
 
@@ -45,6 +45,7 @@
   font-weight: bold;
   border-left: 4px solid white;
 }
+
 .main {
   margin-left: 18%;
   /* background: #000; */
