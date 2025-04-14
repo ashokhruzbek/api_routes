@@ -8,7 +8,7 @@ function UserCard({ism, mail, city,}) {
     <div className='user-card'>
       <div className="image">
         <img src={avatar} alt="User Avatar" class="avatar" />
-        <div className="user-info">
+        <div className="user-info1">
           <h2>{ism}</h2>
           <p className="email">{mail}</p>
           <p className="phone">{city}</p>

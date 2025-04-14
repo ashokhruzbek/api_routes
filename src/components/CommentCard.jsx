@@ -1,18 +1,16 @@
 import React from 'react'
 import Avatar from "../assets/avatar.jpg"
-function CommentCard() {
+function CommentCard({name, email, text}) {
   return (
     <div class="comment-card">
       <div class="user-info">
         <img src={Avatar} alt="User Avatar" class="avatar" />
         <div>
-          <h3 class="comment-name">John Doe</h3>
-          <span class="comment-email">johndoe@example.com</span>
+          <h3 class="comment-name">{name}</h3>
+          <span class="comment-email">{email}</span>
         </div>
       </div>
-      <p class="comment-body">
-        This is a beautiful comment card with gradient background and smooth animations. It includes a profile photo, name, email, and comment text.
-      </p>
+      <p class="comment-body">{text}</p>
     </div>
 
   )

@@ -24,7 +24,7 @@
 }
 
 .header {
-    background-color: var(--primary);
+    background: linear-gradient(135deg, #32ff7e, #00b894);
     color: white;
     padding: 10px;
     text-align: center;
