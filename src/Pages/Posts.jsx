@@ -18,6 +18,7 @@ function Posts() {
       {
         return (
           <PostCard
+          key={post.id}
           title ={post.title}
           post = {post.body}
           />

@@ -8,22 +8,24 @@ import Comments from './Pages/Comments'
 import Posts from './Pages/Posts'
 import Todos from './Pages/Todos'
 import Users from './Pages/Users'
-import Navbar from './components/Navbar'
+import MainLayout from './components/MainLayout'
+import Sidebar from './components/SideBar'
+// import Navbar from './components/Navbar'
 
 function App() {
   return (
-
     <BrowserRouter>
-
-      <SideBar />
-      {/* <Navbar/> */}
+    <Sidebar/>
       <div className="main">
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/users' element={<Users />} />
+
+          <Route path='/' element={<MainLayout />} >
+            <Route index element={<Home />} />
+            <Route path='/users' element={<Users />} />
+            <Route path='/todos' element={<Todos />} />
+          </Route>
           <Route path='/comments' element={<Comments />} />
           <Route path='/posts' element={<Posts />} />
-          <Route path='/todos' element={<Todos />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </div>

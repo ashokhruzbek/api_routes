@@ -63,21 +63,20 @@
 }
 
 .add-btn {
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    padding: 10px 20px;
+    background-color: white;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 5px 50px;
     border-radius: var(--border-radius);
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
     transition: background-color 0.3s;
 }
 
 .add-btn:hover {
-    background-color: #fff;
-    color: var(--primary) ;
+    background-color: var(--primary);
+    color: white;
     border: 1px solid var(--primary);
+    transition: 0.3s;
 }
 
 .tasks-container {
@@ -141,7 +140,7 @@
     opacity: 1;
 }
 
-.footer {
+.footerr {
     padding: 10px;
     text-align: center;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -156,8 +155,8 @@
     margin-top: 5px;
     background-color: transparent;
     color: var(--primary);
-    border: 3px solid var(--primary);
-    padding: 5px 50px;
+    border: 1px solid var(--primary);
+    padding: 8px 50px;
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: all 0.3s;

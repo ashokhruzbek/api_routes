@@ -92,7 +92,7 @@ function TodoCard( {title}) {
           )}
         </div>
 
-        <div className="footer">
+        <div className="footerr">
           <button className="clear-all" onClick={clearAllTasks}>Clear All</button>
         </div>
       </div>
