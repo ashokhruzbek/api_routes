@@ -1,0 +1,67 @@
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .comment-card {
+    max-width: 550px;
+    margin: 30px auto;
+    padding: 20px 24px;
+    background: linear-gradient(135deg, #32ff7e, #00b894);
+    border-radius: 16px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    animation: fadeIn 0.8s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .comment-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid white;
+    box-shadow: 0 0 10px rgba(0, 255, 100, 0.6);
+    transition: transform 0.3s ease;
+  }
+  
+  .comment-card:hover .avatar {
+    transform: rotate(2deg) scale(1.05);
+  }
+  
+  .comment-name {
+    font-size: 22px;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .comment-email {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  
+  .comment-body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
