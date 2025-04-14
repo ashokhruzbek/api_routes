@@ -5,7 +5,8 @@ function Users() {
   const [users, setUsers] = useState(null);
   useEffect(() => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/users`).then((res) => {
+      .get(`https://jsonplaceholder.typicode.com/users`)
+      .then((res) => {
         setUsers(res.data);
       }).catch((err) => {
         console.log(err);
