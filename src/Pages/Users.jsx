@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import UserCard from "../components/UserCard";
 
 function Users() {
   const [users, setUsers] = useState(null);
@@ -15,10 +16,18 @@ function Users() {
       });
   }, []);
 
-  return <div>
-    {users?.map(user => {
-      return <h3>{user.name}</h3>
-    })}
+
+  return <div className="user-container">
+    {users?.map((user)=>{{
+      return (
+      <UserCard 
+      id = {user.id}
+      ism= {user.name}
+      mail={user.email}
+      city={user.address.city}
+      />)
+    }})}
+
   </div>;
 }
 
