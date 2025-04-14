@@ -1,9 +1,23 @@
-import React from 'react'
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-function SideBar() {
+function Sidebar() {
   return (
-    <div>SideBar</div>
-  )
+    <div className="sidebar">
+      <NavLink
+        className={({ isActive }) => (isActive ? "active-link" : "")}
+        to="/users"
+      >
+        Users
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? "active-link" : "")}
+        to="/posts"
+      >
+        Posts
+      </NavLink>
+    </div>
+  );
 }
 
-export default SideBar
+export default Sidebar;

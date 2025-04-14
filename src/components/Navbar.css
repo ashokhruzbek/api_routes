@@ -1,0 +1,65 @@
+/* body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: limegreen;
+    text-align: center;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 0;
+    box-shadow: 0px 2px 5px rgba(0, 255, 0, 0.5);
+    z-index: -1;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar ul li a {
+    position: relative;
+    font-size: 20px;
+    color: limegreen;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+  
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    color: limegreen;
+    background: black;
+  }
+  
+  .glitch::before {
+    top: -2px;
+    left: -2px;
+    text-shadow: -2px 0 red;
+    clip: rect(0, 0, 0, 0);
+  }
+  
+  .glitch::after {
+    top: 2px;
+    left: 2px;
+    text-shadow: 2px 0 blue;
+    clip: rect(0, 0, 0, 0);
+  }
+   */
