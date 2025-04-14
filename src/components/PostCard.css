@@ -1,5 +1,6 @@
 .post-container{
     display: flex;
+    background: rgba(0, 0, 0, 0.9);
 }
 .post {
     width: 980px;

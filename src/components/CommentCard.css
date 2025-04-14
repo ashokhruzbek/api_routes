@@ -11,6 +11,7 @@
   }
   .container-coment{
     padding: 10px;
+    background: rgba(0, 0, 0, 0.9);
   }
   
   .comment-card {
@@ -18,11 +19,11 @@
     max-width: 980px;
     margin: 20px auto;
     padding: 20px 24px;
-    background: linear-gradient(135deg, #32ff7e, #00b894);
+    background: #fff;
     border-radius: 16px;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    border: 2px solid #00ff00;
+    box-shadow: 0 10px 50px rgba(0, 255, 0, 0.5);
     font-family: 'Segoe UI', sans-serif;
-    color: white;
     animation: fadeIn 0.8s ease;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     
@@ -63,6 +64,7 @@
   .comment-email {
     font-size: 14px;
     opacity: 0.8;
+
   }
   
   .comment-body {

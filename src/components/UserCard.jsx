@@ -1,7 +1,7 @@
 import React from 'react'
 import './UserCard.css'
 import avatar from '../assets/avatar.jpg';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 function UserCard({ism, mail, city,}) {
   return (

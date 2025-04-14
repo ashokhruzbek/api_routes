@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import UserCard from "../components/UserCard";
+import { Outlet } from "react-router-dom";
 function Users() {
   const [users, setUsers] = useState(null);
   useEffect(() => {
@@ -23,8 +24,8 @@ function Users() {
               mail={user.email}
               city={user.address.city}
             />)
-        }
-      })}
+          }
+        })}
     </div>
   );
 }
