@@ -5,11 +5,6 @@ import { useNavigate } from 'react-router-dom';
 function PostCard({ title, post }) {
 
   const navigate = useNavigate();
-  const handleLogin = (e) => {
-    e.preventDefault();
-    navigate('/comments', { replace: true });
-
-  }
   return (
     <div onClick={() => navigate('/comments')} className="post-container" style={{ cursor: 'pointer' }}>
     <div className="post">
