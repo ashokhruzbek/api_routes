@@ -21,7 +21,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/users' element={<Users />} />
           <Route path='/users/:userId/todos' element={<Todos />} />
-          <Route path='/posts' element={<Posts />} />
+          <Route path='/users/:userId/posts' element={<Posts />} />
           <Route path='/comments' element={<Comments />} />
           <Route path='*' element={<NotFound />} />
         </Routes>

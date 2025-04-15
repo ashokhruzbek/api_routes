@@ -57,6 +57,7 @@
 .footer{
     display: flex;
     justify-content: flex-end;
+    gap: 20px;
 }
 .footer-btn{
     background: #21db219c;

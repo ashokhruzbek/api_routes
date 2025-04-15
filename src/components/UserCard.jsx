@@ -3,7 +3,7 @@ import './UserCard.css'
 import avatar from '../assets/avatar.jpg';
 import { Link, Outlet } from 'react-router-dom';
 
-function UserCard({id, ism, mail, city,}) {
+function UserCard({id, ism, mail, city}) {
   const avatar = `https://i.pravatar.cc/300?img=${id % 50}`
   return (
     <div className='user-card'>
@@ -16,7 +16,8 @@ function UserCard({id, ism, mail, city,}) {
         </div>
       </div>
         <div className="footer">
-          <Link to={`/users/${id}/todos`} className='footer-btn'>More</Link>
+          <Link to={`/users/${id}/todos`} className='footer-btn'>Todos</Link>
+          <Link to={`/users/${id}/posts`} className='footer-btn'>Posts</Link>
         </div>
     </div>
   )

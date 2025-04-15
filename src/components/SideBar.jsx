@@ -10,12 +10,12 @@ function Sidebar() {
       >
         Users
       </NavLink>
-      <NavLink
+      {/* <NavLink
         className={({ isActive }) => (isActive ? "active-link" : "")}
-        to="/posts"
+        to="posts"
       >
         Posts
-      </NavLink>
+      </NavLink> */}
     </div>
   );
 }
