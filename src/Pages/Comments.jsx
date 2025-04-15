@@ -2,30 +2,34 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import CommentCard from '../components/CommentCard'
 import '../components/CommentCard.css'
+import { useParams } from 'react-router-dom'
 
 function Comments() {
+  const {postId} = useParams();
+  console.log(postId);
+  
   const [comments, setComments] = useState();
   useEffect(() => {
-    axios.get(`https://jsonplaceholder.typicode.com/comments`)
-    .then((res)=>{
-      setComments(res.data);
-    })
-    .catch((err)=>{
-      console.log(err);
-    })
-  },[])
+    try {
+      const info = async () => {
+        const res = await axios.get(
+          `https://jsonplaceholder.typicode.com/posts/${postId}/comments`
+        );
+        console.log(res.data);
+        setComments(res.data);
+        
+      };
+      info();
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
   return (
 
     <div className='container-coment'> 
     {comments?.map((comment)=>{
       return (
-        <CommentCard 
-        //  key={comment.id}
-         name = {comment.name}
-         email={comment.email}
-         text={comment.body}
-
-         />
+        <CommentCard comment={comment}/>
 
       );
     })}

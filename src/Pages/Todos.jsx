@@ -16,6 +16,7 @@ function Todos() {
         );
         console.log(res.data);
         setTodos(res.data);
+        
       };
       info();
     } catch (error) {
