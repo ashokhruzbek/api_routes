@@ -4,7 +4,7 @@ import PostCard from '../components/PostCard'
 
 function Posts() {
   const [posts, setPosts] = useState(null)
-  
+
   useEffect(() => {
     axios.get(`https://jsonplaceholder.typicode.com/posts`)
       .then((res) => {
@@ -19,6 +19,7 @@ function Posts() {
       {
         return (
           <PostCard 
+          id = {post.id}
           title={post.title}
           text={post.body}
           />
