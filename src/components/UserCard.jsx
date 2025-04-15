@@ -3,7 +3,8 @@ import './UserCard.css'
 import avatar from '../assets/avatar.jpg';
 import { Link, Outlet } from 'react-router-dom';
 
-function UserCard({ism, mail, city,}) {
+function UserCard({id, ism, mail, city,}) {
+  const avatar = `https://i.pravatar.cc/300?img=${id % 50}`
   return (
     <div className='user-card'>
       <div className="image">
