@@ -15,17 +15,14 @@ import Sidebar from './components/SideBar'
 function App() {
   return (
     <BrowserRouter>
-    <Sidebar/>
+      <Sidebar />
       <div className="main">
         <Routes>
-
-          <Route path='/' element={<MainLayout />} >
-            <Route index element={<Home />} />
-            <Route path='/users' element={<Users />} />
-            <Route path='/todos' element={<Todos />} />
-          </Route>
-          <Route path='/comments' element={<Comments />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/users' element={<Users />} />
+          <Route path='/users/:userId/todos' element={<Todos />} />
           <Route path='/posts' element={<Posts />} />
+          <Route path='/comments' element={<Comments />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </div>

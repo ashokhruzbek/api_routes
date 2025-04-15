@@ -16,7 +16,7 @@ function UserCard({id, ism, mail, city,}) {
         </div>
       </div>
         <div className="footer">
-          <Link to='/todos' className='footer-btn'>More</Link>
+          <Link to={`/users/${id}/todos`} className='footer-btn'>More</Link>
         </div>
     </div>
   )

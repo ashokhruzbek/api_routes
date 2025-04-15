@@ -1,196 +1,65 @@
-:root {
-    --primary: #00ff00;
-    --primary-dark: #14202E;
-    --secondary: #89AAC3;
-    --light: #F5F7FA;
-    --dark: #0A1334;
-    --shadow: 0 10px 50px rgba(0, 255, 0, 0.5);
-    --border-radius: 10px;
-}
-
-
+/* TodoCard umumiy dizayni */
 .todo-container{
-    padding-top: 10px;
+    padding: 10px;
 }
-.container {
-    /* padding-top: 100px; */
-    margin:  0 auto;
+
+.todo-card {
+    background-color: #ffffff;
+    border: 1px solid #00ff00;
+    border-radius: 12px;
+    box-shadow: 0px 6px 10px rgba(0, 255, 0, 0.5);
+    padding: 20px;
+    margin: 5px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
     width: 100%;
-    max-width: 600px;
-    background-color: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
 }
 
-.header {
-    background: linear-gradient(135deg, #32ff7e, #00b894);
-    color: white;
-    padding: 10px;
-    text-align: center;
+.todo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.header h1 {
-    font-size: 2rem;
-    margin-bottom: 5px;
-}
-
-.form-container {
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.task-form {
+/* Todo kartaning tarkibi */
+.todo-content {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
 }
 
-.task-input {
-    flex-grow: 1;
-    padding: 7px;
-    border: 1px solid #ddd;
-    border-radius: var(--border-radius);
+.todo-title {
+    font-size: 1.4rem;
+    color: #2d3748;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.todo-status {
     font-size: 1rem;
-    transition: border-color 0.3s;
-    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+    color: #4a5568;
+    font-weight: 500;
 }
 
-.task-input:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.2);
+/* Tugallangan todo uchun dizayn */
+.todo-card.completed {
+    background-color: #d1fae5; /* Yengil yashil rang */
+    border-left: 6px solid #10b981; /* Yashil chiziq */
 }
 
-.add-btn {
-    background-color: white;
-    color: var(--primary);
-    border: 1px solid var(--primary);
-    padding: 5px 50px;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: background-color 0.3s;
+.todo-card.completed .todo-status {
+    color: #10b981; /* Yashil rang */
+    font-weight: bold;
 }
 
-.add-btn:hover {
-    background-color: var(--primary);
-    color: white;
-    border: 1px solid var(--primary);
-    transition: 0.3s;
+/* Not Completed todo uchun dizayn */
+.todo-card:not(.completed) {
+    background-color: #fef2f2; /* Yengil qizil rang */
+    border-left: 6px solid #f87171; /* Qizil chiziq */
 }
 
-.tasks-container {
-    padding: 10px;
-    max-height: 400px;
-    overflow-y: auto;
-}
-
-.task-list {
-    list-style: none;
-}
-
-.task-item {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-.task-item:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
-}
-
-.task-checkbox {
-    margin-right: 12px;
-    height: 18px;
-    width: 18px;
-    cursor: pointer;
-    accent-color: var(--primary);
-}
-
-.task-content {
-    flex-grow: 1;
-    font-size: 1rem;
-    color: var(--dark);
-}
-
-.completed {
-    text-decoration: line-through;
-    opacity: 0.6;
-}
-
-.delete-btn {
-    background-color: transparent;
-    color: red;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    opacity: 0.7;
-    transition: opacity 0.3s;
-}
-
-.delete-btn:hover {
-    opacity: 1;
-}
-
-.footerr {
-    padding: 10px;
-    text-align: center;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    color: var(--dark);
-    font-size: 0.9rem;
-    background-color: #f2f2f2;
-}
-
-
-
-.clear-all {
-    margin-top: 5px;
-    background-color: transparent;
-    color: var(--primary);
-    border: 1px solid var(--primary);
-    padding: 8px 50px;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.clear-all:hover {
-    background-color: var(--primary);
-    color: white;
-}
-
-.empty-state {
-    text-align: center;
-    padding: 20px 0;
-    color: var(--dark);
-}
-
-@media (max-width: 500px) {
-    .task-form {
-        flex-direction: column;
-    }
-    
-    .header h1 {
-        font-size: 1.8rem;
-    }
-}
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.todo-card:not(.completed) .todo-status {
+    color: #f87171; /* Qizil rang */
+    font-weight: bold;
 }
